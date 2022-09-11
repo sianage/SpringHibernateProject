@@ -1,0 +1,5 @@
+127.0.0.1 - - [04/Sep/2022:13:34:11 -0400] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [04/Sep/2022:13:34:13 -0400] "GET /spring-mvc-demo/ HTTP/1.1" 200 179
+0:0:0:0:0:0:0:1 - - [04/Sep/2022:13:34:13 -0400] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [04/Sep/2022:13:34:16 -0400] "GET /spring-mvc-demo/showForm HTTP/1.1" 200 284
+0:0:0:0:0:0:0:1 - - [04/Sep/2022:13:34:21 -0400] "GET /spring-mvc-demo/processFormVersionTwo?studentName=ricky HTTP/1.1" 200 142

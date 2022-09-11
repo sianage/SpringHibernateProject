@@ -1,0 +1,11 @@
+package com.code.springdemo;
+
+public class FortuneService2 implements FortuneService {
+
+	@Override
+	public String getFortune() {
+		//
+		return "Fortune #2";
+	}
+
+}

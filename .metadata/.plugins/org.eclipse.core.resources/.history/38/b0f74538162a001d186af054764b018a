@@ -1,0 +1,48 @@
+package com.code.springdemo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+/*spring will automatically register this bean
+ * with the spring container using the bean id
+ * thatSillyCoach so at a later time we can retrieve
+ * that bean from the container using that bean id*/
+
+//we removed the @Component("thatSillyCoach") annotation so it uses the default
+@Component
+public class TennisCoach implements Coach {
+	//Field injection
+	@Autowired
+	private FortuneService fortuneService;
+	
+	//define default constructor (Step 1)
+	public TennisCoach() {
+		System.out.println(">> inside default constructor");
+	}
+	
+	//define a new name for setter method & configure with @Autowired(Step 2)
+	/*
+	@Autowired
+	public void doSomeStuff(FortuneService theFortuneService) {
+		System.out.println(">> inside doSomeStuff");
+		fortuneService = theFortuneService;
+	}
+	
+	//constructor
+	@Autowired
+	public TennisCoach(FortuneService theFortuneService) {
+		fortuneService = theFortuneService;
+	}*/
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "Practice hitting stuff with tennis racket";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return fortuneService.getFortune();
+	}
+
+}

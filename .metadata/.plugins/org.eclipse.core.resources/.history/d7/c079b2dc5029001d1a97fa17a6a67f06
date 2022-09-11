@@ -1,0 +1,17 @@
+package com.code.springdemo;
+
+import org.springframework.stereotype.Component;
+/*spring will automatically register this bean
+ * with the spring container using the bean id
+ * thatSillyCoach so at a later time we can retrieve
+ * that bean from the container using that bean id*/
+@Component("thatSillyCoach")
+public class TennisCoach implements Coach {
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "Practice hitting stuff with tennis racket";
+	}
+
+}
